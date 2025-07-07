@@ -91,7 +91,7 @@ Dynamic KPI Cards
 - % Gain or Loss over Selected Range
 
 📂 Folder Structure
-/Adani-Dashboard
+Adani-Dashboard
 │
 ├── data/
 │   └── adani_stock_data.xlsx
@@ -119,6 +119,6 @@ Dynamic KPI Cards
 - Strengthened the ability to derive strategic insights from raw data
 
 👤 Author
-Yash Bagga
-Data Enthusiast | Power BI Developer | Excel & DAX Learner
-Feel free to connect on LinkedIn or message for collaboration or feedback!
+- Yash Bagga
+- Data Enthusiast | Power BI Developer | Excel & DAX Learner
+- Feel free to connect on LinkedIn or message for collaboration or feedback!
