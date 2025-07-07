@@ -7,54 +7,54 @@ This project presents a dynamic and interactive stock market analysis dashboard 
 
 
 🎯 Project Objectives
--To build an insightful and interactive dashboard that visualizes stock movement of Adani companies.
--To track and compare daily closing prices, volumes, volatility, and moving averages.
--To implement DAX formulas for intelligent insights such as YoY change, % growth, and technical indicators.
--To identify patterns, trends, and anomalies for individual companies and the group as a whole.
--To create a tool for investors, analysts, and students to interpret financial time-series data easily.
+- To build an insightful and interactive dashboard that visualizes stock movement of Adani companies.
+- To track and compare daily closing prices, volumes, volatility, and moving averages.
+- To implement DAX formulas for intelligent insights such as YoY change, % growth, and technical indicators.
+- To identify patterns, trends, and anomalies for individual companies and the group as a whole.
+- To create a tool for investors, analysts, and students to interpret financial time-series data easily.
 
 
 📌 Key Features
-📅 Date Slicer: Select specific time periods for customized analysis.
-📈 Stock Price Trends: Line charts showing daily closing prices.
-📊 Trading Volume: Bar charts representing the number of shares traded per day.
-🔁 Moving Averages: 7-day, 14-day, and 30-day moving averages using DAX.
-📉 Volatility Chart: Calculated standard deviation of price changes over rolling periods.
-💹 Year-over-Year Comparison: % growth in stock value across months and years.
-📍 Company-wise Filters: Interactive slicers to focus on a single Adani entity.
-📑 Dynamic KPIs: Cards showing current price, highest high, lowest low, and average closing.
+- 📅 Date Slicer: Select specific time periods for customized analysis.
+- 📈 Stock Price Trends: Line charts showing daily closing prices.
+- 📊 Trading Volume: Bar charts representing the number of shares traded per day.
+- 🔁 Moving Averages: 7-day, 14-day, and 30-day moving averages using DAX.
+- 📉 Volatility Chart: Calculated standard deviation of price changes over rolling periods.
+- 💹 Year-over-Year Comparison: % growth in stock value across months and years.
+- 📍 Company-wise Filters: Interactive slicers to focus on a single Adani entity.
+- 📑 Dynamic KPIs: Cards showing current price, highest high, lowest low, and average closing.
 
 
 🏗 Tools & Technologies Used
--Tool/Technology:	Purpose
--Power BI:	Dashboard development and visualization
--Excel:	Data cleaning, formatting, and preprocessing
--DAX:	Custom measures, calculated columns, KPIs
--NSE India Website:	Source for historical stock data (CSV exports)
+- Tool/Technology:	Purpose
+- Power BI:	Dashboard development and visualization
+- Excel:	Data cleaning, formatting, and preprocessing
+- DAX:	Custom measures, calculated columns, KPIs
+- NSE India Website:	Source for historical stock data (CSV exports)
 
 📦 Dataset Description
--Source: https://www.nseindia.com
--Time Frame: April 1, 2024 – April 1, 2025
+- Source: https://www.nseindia.com
+- Time Frame: April 1, 2024 – April 1, 2025
 
 
 Stocks Covered:
--Adani Enterprises
--Adani Green Energy
--Adani Ports
--Adani Total Gas
--Adani Transmission
--Adani Power
--ACC
--Ambuja Cements
+- Adani Enterprises
+- Adani Green Energy
+- Adani Ports
+- Adani Total Gas
+- Adani Transmission
+- Adani Power
+- ACC
+- Ambuja Cements
 
 
 Fields Used:
--Date
--Open
--High
--Low
--Close
--Volume
+- Date
+- Open
+- High
+- Low
+- Close
+- Volume
 - %Change (calculated)
 
 
@@ -64,6 +64,7 @@ Sample Calculated Measures
     LASTN(7, FILTER('StockData', 'StockData'[Company] = SELECTEDVALUE('StockData'[Company]))),
     'StockData'[Close]
 )
+
 
 Year-over-Year Change = 
 VAR CurrentYear = YEAR(MAX('StockData'[Date]))
@@ -75,6 +76,7 @@ DIVIDE(
     CALCULATE(SUM('StockData'[Close]), YEAR('StockData'[Date]) = PrevYear)
 )
 
+
 Volatility (30-day Std Dev) =
 STDEVX.P(
     LASTN(30, FILTER('StockData', 'StockData'[Company] = SELECTEDVALUE('StockData'[Company]))),
@@ -83,10 +85,10 @@ STDEVX.P(
 
 
 Dynamic KPI Cards
--Current Close Price
--Max High of Selected Period
--Avg Close of Selected Period
--% Gain or Loss over Selected Range
+- Current Close Price
+- Max High of Selected Period
+- Avg Close of Selected Period
+- % Gain or Loss over Selected Range
 
 📂 Folder Structure
 /Adani-Dashboard
@@ -105,16 +107,16 @@ Dynamic KPI Cards
 └── LICENSE
 
 🚀 Future Scope
--Integration of real-time stock feeds via API
--Addition of fundamental indicators (PE ratio, EPS, Market Cap)
--Sector benchmarking with peer companies
--Predictive analytics using machine learning models in Power BI or Python
+- Integration of real-time stock feeds via API
+- Addition of fundamental indicators (PE ratio, EPS, Market Cap)
+- Sector benchmarking with peer companies
+- Predictive analytics using machine learning models in Power BI or Python
 
 🧠 Learnings
--Gained hands-on experience with financial time-series data
--Developed proficiency in DAX for complex business logic
--Understood the importance of storytelling through visualization
--Strengthened the ability to derive strategic insights from raw data
+- Gained hands-on experience with financial time-series data
+- Developed proficiency in DAX for complex business logic
+- Understood the importance of storytelling through visualization
+- Strengthened the ability to derive strategic insights from raw data
 
 👤 Author
 Yash Bagga
