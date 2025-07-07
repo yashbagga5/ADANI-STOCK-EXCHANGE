@@ -60,13 +60,15 @@ Fields Used:
 
 📐 DAX Formulas Used
 Sample Calculated Measures
-7-Day Moving Average = AVERAGEX(
+
+
+- 7-Day Moving Average = AVERAGEX(
     LASTN(7, FILTER('StockData', 'StockData'[Company] = SELECTEDVALUE('StockData'[Company]))),
     'StockData'[Close]
 )
 
 
-Year-over-Year Change = 
+- Year-over-Year Change = 
 VAR CurrentYear = YEAR(MAX('StockData'[Date]))
 VAR PrevYear = CurrentYear - 1
 RETURN
@@ -77,7 +79,7 @@ DIVIDE(
 )
 
 
-Volatility (30-day Std Dev) =
+- Volatility (30-day Std Dev) =
 STDEVX.P(
     LASTN(30, FILTER('StockData', 'StockData'[Company] = SELECTEDVALUE('StockData'[Company]))),
     'StockData'[Close]
